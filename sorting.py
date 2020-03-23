@@ -67,7 +67,7 @@ def _merged(left, right, cmp=cmp_standard):
     while lo < len(left):
         xs[x] = left[lo]
         lo += 1
-        x += 1
+        x +=1 
     while hi < len(right):
        xs[x] = right[hi]
        hi += 1
