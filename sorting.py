@@ -2,6 +2,7 @@
 '''
 Python provides built-in sort/sorted functions that use timsort internally.
 You cannot use these built-in functions anywhere in this file.
+
 Every function in this file takes a comparator `cmp` as input which controls how the elements of the list should be compared against each other.
 If cmp(a,b) returns -1, then a<b;
 if cmp(a,b) returns  1, then a>b;
@@ -56,7 +57,7 @@ def _merged(left, right, cmp=cmp_standard):
 
     xs = left + right
     while lo < len(left) and hi < len(right):
-        if cmp(left[lo],right[hi] == -1:
+        if cmp(left[lo],right[hi]) == -1:
                xs[x] = left[lo]
                lo += 1
         else:
