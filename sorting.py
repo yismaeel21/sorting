@@ -62,7 +62,7 @@ def _merged(left, right, cmp=cmp_standard):
                lo += 1
         else:
                xs[x] = right[hi]
-               r+=1
+               hi+=1
         x += 1
     while lo < len(left):
         xs[x] = left[lo]
