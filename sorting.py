@@ -57,21 +57,21 @@ def _merged(left, right, cmp=cmp_standard):
 
     xs = left + right
     while lo < len(left) and hi < len(right):
-        if cmp(left[lo],right[hi]) == -1:
+        if cmp(left[lo],right[hi] == -1:
                xs[x] = left[lo]
                lo += 1
         else:
                xs[x] = right[hi]
                r+=1
-       x += 1
+        x += 1
     while lo < len(left):
         xs[x] = left[lo]
         lo += 1
-        x +=1 
+        x += 1
     while hi < len(right):
-       xs[x] = right[hi]
-       hi += 1
-       x+= 1
+        xs[x] = right[hi]
+        hi += 1
+        x+= 1
   
                
     return xs
@@ -80,6 +80,7 @@ def merge_sorted(xs, cmp=cmp_standard):
     '''
     Merge sort is the standard O(n log n) sorting algorithm.
     Recall that the merge sort pseudo code is:
+
         if xs has 1 element
             it is sorted, so return xs
         else
@@ -87,6 +88,7 @@ def merge_sorted(xs, cmp=cmp_standard):
             sort the left
             sort the right
             merge the two sorted halves
+
     You should return a sorted version of the input list xs
     '''
     if len(xs) <= 1:
@@ -104,7 +106,9 @@ def quick_sorted(xs, cmp=cmp_standard):
     Instead of splitting the list down the middle,
     a "pivot" value is randomly selected, 
     and the list is split into a "less than" sublist and a "greater than" sublist.
+
     The pseudocode is:
+
         if xs has 1 element
             it is sorted, so return xs
         else
@@ -113,6 +117,7 @@ def quick_sorted(xs, cmp=cmp_standard):
             put all the values greater than p in a list
             sort both lists recursively
             return the concatenation of (less than, p, and greater than)
+
     You should return a sorted version of the input list xs
     '''
     if len(xs) <= 1:
@@ -122,3 +127,4 @@ def quick_sorted(xs, cmp=cmp_standard):
         lower = xs[:rand]
         higher= xs[rand:]
         return _merged(merge_sorted(lower,cmp),merge_sorted(higher,cmp),cmp)
+
